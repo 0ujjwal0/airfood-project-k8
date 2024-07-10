@@ -6,11 +6,11 @@
       "src": "airfood-frontend/package.json",
       "use": "@vercel/static-build",
       "config": {
-        "distDir": "meal-frontend/build"
+        "distDir": "airfood-frontend/build"
       }
     },
     {
-      "src": "meal-backend/server.js",
+      "src": "airfood-backend/server.js",
       "use": "@vercel/node"
     }
   ],
