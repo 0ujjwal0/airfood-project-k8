@@ -1,0 +1,21 @@
+{
+  "version": 2,
+  "name": "airfood-project",
+  "builds": [
+    {
+      "src": "airfood-frontend/package.json",
+      "use": "@vercel/static-build",
+      "config": {
+        "distDir": "meal-frontend/build"
+      }
+    },
+    {
+      "src": "meal-backend/server.js",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    { "src": "/api/(.*)", "dest": "/airfood-backend/server.js" },
+    { "src": "/(.*)", "dest": "/airfood-frontend/build/index.html" }
+  ]
+}
