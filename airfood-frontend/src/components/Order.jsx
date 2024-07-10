@@ -15,7 +15,7 @@ function Order() {
   const [data, setData] = useState({ meals: [] });
 
   useEffect(() => {
-    axios.get('https://airfood-project.onrender.com')
+    axios.get('http://localhost:3000/api/meals')
       .then(response => setData(response.data))
       .catch(error => console.error('Error fetching data:', error));
   }, []);
