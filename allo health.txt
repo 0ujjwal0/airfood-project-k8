@@ -1,0 +1,38 @@
+Backend
+
+State management
+
+
+React App
+
+
+Testing
+
+
+
+Live Hosting
+
+>>>>>>>>>>>>>>>>>>>>>
+React App
+JSON for backend
+
+ListService... getList(), getListByTag(tag) 
+
+Stage 1.
+
+Page 
+State-> Which person selected, Which tag selected, selected item.
+
+
+Person Component. Static Two Person... First by default select. onClick(peron)
+
+Tags Component -> Props.List..
+" This will show all the tags"
+Onclick=> 
+
+
+List Component -> Props.. List
+onClick()
+
+Total Component...
+Props.List 

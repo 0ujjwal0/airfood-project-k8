@@ -1,7 +1,7 @@
 import React from "react";
 
 function Person({ selectedPerson, setSelectedPerson }) {
-  const persons = ["passenger1", "passenger2"];
+  const persons = ["passenger1", "passenger2","passenger3"];
 
   const handleChange = (event) => {
     setSelectedPerson(event.target.value);

@@ -11,13 +11,15 @@ function Order() {
   const [selectedItems, setSelectedItems] = useState({
     passenger1: [],
     passenger2: [],
+    passenger3: [],
   });
   const [data, setData] = useState({ meals: [] });
 
   useEffect(() => {
-    axios.get('http://localhost:3000/api/meals')
-      .then(response => setData(response.data))
-      .catch(error => console.error('Error fetching data:', error));
+    axios
+      .get("http://13.235.132.240:31100/api/meals")
+      .then((response) => setData(response.data))
+      .catch((error) => console.error("Error fetching data:", error));
   }, []);
 
   const getList = () => data.meals;
@@ -37,6 +39,7 @@ function Order() {
     const allItemsSelected = [
       ...selectedItems.passenger1,
       ...selectedItems.passenger2,
+      ...selectedItems.passenger3,
     ];
     return allItemsSelected.reduce((total, item) => total + item.price, 0);
   };
