@@ -17,7 +17,7 @@ function Order() {
 
   useEffect(() => {
     axios
-      .get("http://13.126.100.211/api/meals")
+      .get("http://13.127.217.184/api/meals")
       .then((response) => setData(response.data))
       .catch((error) => console.error("Error fetching data:", error));
   }, []);
