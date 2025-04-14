@@ -1,17 +1,27 @@
-# Use Node.js base image
-FROM node:18
+# Stage 1
+FROM node:21 AS backend-builder
 
-# Set working directory
+# setup the working dir
 WORKDIR /app
 
-# Copy package.json and install dependencies
-COPY package.json package-lock.json ./
-RUN npm install
-
-# Copy all backend files (including data.json)
+# code
 COPY . .
 
-# Expose the API port
+# packages install
+RUN npm i
+
+# Stage 2
+FROM node:21-slim
+
+# setup the working dir
+WORKDIR /app
+
+# copy the above stage as compressed
+COPY --from=backend-builder /app .
+
+COPY .env.docker .env
+
+# Port
 EXPOSE 8080
 
 # Start the server
