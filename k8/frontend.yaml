@@ -18,7 +18,7 @@ spec:
     spec:
       containers:
         - name: frontend
-          image: ujjwal0101/airfoodfront:latest
+          image: ujjwal0101/airfront:latest
           ports:
             - containerPort: 5173
 ---
