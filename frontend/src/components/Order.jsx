@@ -17,7 +17,7 @@ function Order() {
 
   useEffect(() => {
     axios
-      .get("http://13.233.138.72/api/meals")
+      .get(`${import.meta.env.VITE_API_URL}/api/meals`)
       .then((response) => setData(response.data))
       .catch((error) => console.error("Error fetching data:", error));
   }, []);
