@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: frontend-deployment
-  namespace: af
+  namespace: airfood
   labels:
     app: frontend
 spec:
@@ -18,7 +18,7 @@ spec:
     spec:
       containers:
         - name: frontend
-          image: ujjwal0101/af:latest
+          image: ujjwal9891/airfoodfrontend:latest
           ports:
             - containerPort: 5173
 ---
@@ -26,7 +26,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: frontend-service
-  namespace: af
+  namespace: airfood
 spec:
   selector:
     app: frontend

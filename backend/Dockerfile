@@ -11,7 +11,7 @@ COPY . .
 RUN npm i
 
 # Stage 2
-FROM node:21-slim
+FROM node:21
 
 # setup the working dir
 WORKDIR /app

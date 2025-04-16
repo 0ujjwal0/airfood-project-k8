@@ -8,7 +8,7 @@ COPY . .
 RUN npm run build
 
 # ------------------- Stage 2: Final Stage ------------------------------
-FROM node:21-slim
+FROM node:21
 WORKDIR /app
 # Install 'serve' to host static files
 RUN npm install -g serve
