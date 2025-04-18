@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React from "react";
 import Order from "./components/Order";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
